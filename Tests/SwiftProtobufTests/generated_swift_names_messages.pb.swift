@@ -21405,7 +21405,7 @@ extension ProtobufUnittestGenerated_GeneratedSwiftReservedMessages.characters: S
   ]
 
   func _protobuf_generated_isEqualTo(other: ProtobufUnittestGenerated_GeneratedSwiftReservedMessages.characters) -> Bool {
-    if self.characters != other.characters {return false}
+    if self != other {return false}
     if unknownFields != other.unknownFields {return false}
     return true
   }

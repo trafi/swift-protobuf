@@ -21,7 +21,9 @@ import Dispatch
 
 internal func buildTypeURL(forMessage message: Message, typePrefix: String) -> String {
   var url = typePrefix
-  if typePrefix.isEmpty || typePrefix.characters.last != "/" {
+
+  let needsSlash = typePrefix.isEmpty || typePrefix.last != "/"
+  if needsSlash {
     url += "/"
   }
   return url + typeName(fromMessage: message)
